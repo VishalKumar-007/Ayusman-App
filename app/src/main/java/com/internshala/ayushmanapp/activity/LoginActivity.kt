@@ -1,11 +1,10 @@
-package com.internshala.ayushmanapp
+package com.internshala.ayushmanapp.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import com.internshala.ayushmanapp.R
 
 class LoginActivity : AppCompatActivity() {
 
@@ -35,8 +34,32 @@ class LoginActivity : AppCompatActivity() {
                 etPhoneNumber.setBackgroundResource(R.drawable.edittext_error_background)
                 tvPhoneNumber.text = "*Please enter phone number."
             }
+            else if (phoneNumber.length < 10){
+                etPhoneNumber.setBackgroundResource(R.drawable.edittext_error_background)
+                tvPhoneNumber.text = "*Phone number should contain 10 digits."
+            }
             else{
                 Toast.makeText(this, "Clicked on Get Otp", Toast.LENGTH_SHORT).show()
+                etPhoneNumber.setBackgroundResource(R.drawable.edittext_background)
+                tvPhoneNumber.text = ""
+            }
+        }
+
+        txtTermsAndConditions.setOnClickListener {
+            Intent(this, TermsAndConditionActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        txtPrivacyPolicy.setOnClickListener {
+            Intent(this, PrivacyPolicyActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        txtAboutUs.setOnClickListener {
+            Intent(this, AboutUsActivity::class.java).also {
+                startActivity(it)
             }
         }
 

@@ -1,9 +1,10 @@
-package com.internshala.ayushmanapp
+package com.internshala.ayushmanapp.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.internshala.ayushmanapp.R
 
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
