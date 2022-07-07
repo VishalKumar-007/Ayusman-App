@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="260dp"
-        android:layout_marginBottom="-25dp"
+        android:layout_marginBottom="-15dp"
         android:background="@color/white"
         app:cardCornerRadius="20dp">
 
@@ -30,35 +30,116 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="67dp"
+                android:layout_width="70dp"
                 android:layout_height="40dp"
                 android:src="@drawable/txt_login"
-                android:paddingStart="0.5dp"/>
+                android:paddingStart="0.5dp"
+                android:paddingEnd="0dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto_light"
+                android:fontFamily="@font/roboto_regular"
                 android:text="Enter your valid information (Only for Registered users)"
-                android:textColor="#c5c5c5"
+                android:textColor="#b3b3b3"
                 android:textSize="10sp" />
 
             <EditText
+                android:id="@+id/etPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/edittext_background"
-                android:fontFamily="@font/roboto_light"
+                android:fontFamily="@font/roboto_regular"
                 android:hint="Enter phone number"
-                android:textColor="#b1b1b1"
-                android:textColorHint="#b1b1b1"
-                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textColorHint="#b3b3b3"
+                android:textSize="12sp"
                 android:layout_marginTop="32dp"
-                android:paddingVertical="17dp"
-                android:paddingHorizontal="17dp"
+                android:paddingVertical="13dp"
+                android:paddingHorizontal="13dp"
                 android:inputType="number"
                 android:maxLength="10"/>
 
+            <TextView
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="11sp"
+                android:fontFamily="@font/roboto_medium"
+                android:layout_marginStart="4dp"
+                android:textColor="#bf1e2e"/>
+
+            <Button
+                android:id="@+id/btnGetOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:text="Get OTP"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:letterSpacing="0"
+                android:textSize="13sp"
+                android:layout_marginTop="17dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"/>
+
+            <Button
+                android:id="@+id/btnBuyNow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:letterSpacing="0"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:background="@drawable/button_background"
+                android:text="Buy Now"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular" />
+
         </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_gravity="bottom">
+
+            <TextView
+                android:id="@+id/txtTermsAndConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Terms &amp; Conditions"
+                android:textColor="#65A04E"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/txtAboutUs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="About us"
+                android:textSize="10sp"
+                android:textColor="#65A04E"
+                android:layout_toRightOf="@+id/txtTermsAndConditions"
+                android:layout_toLeftOf="@+id/txtPrivacyPolicy"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/txtPrivacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Privacy Policy"
+                android:textSize="10sp"
+                android:textColor="#65A04E"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 
